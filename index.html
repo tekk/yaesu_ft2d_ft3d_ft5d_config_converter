@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaesu FT2D/FT3D/FT5D Configuration Converter</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container py-5">
+        <!-- Main Heading -->
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h1 class="display-4 fw-bold text-white">
+                    <span class="material-icon"
+                        style="font-size: 3rem; vertical-align: middle; margin-right: 0.5rem;">radio</span>
+                    Yaesu FT2D/FT3D/FT5D Configuration Converter
+                    <span class="nerd-icon"
+                        style="font-size: 2rem; vertical-align: middle; margin-left: 0.5rem;"></span>
+                </h1>
+                <p class="text-center text-warning mb-4">
+                    <span class="material-icon" style="font-size: 1.2rem; vertical-align: middle; margin-right: 0.5rem;">science</span>
+                    <strong>v0.0.1</strong> This is Alpha version - feel free to open issue on 
+                    <a href="https://github.com/tekk" target="_blank" rel="noopener" class="text-info text-decoration-none">
+                        <span class="nerd-icon" style="font-size: 1rem; vertical-align: middle; margin-right: 0.2rem;">󰊤</span>Github
+                    </a> if you've found a bug.
+                </p>
+            </div>
+        </div>
+
+        <!-- Transceiver Selection Grid -->
+        <div class="card bg-dark border-secondary mb-4">
+            <div class="card-body">
+                <!-- Source Row -->
+                <div class="row mb-4">
+                    <div class="col-12 mb-3">
+                        <h3 class="text-white text-center">
+                            <span class="material-icon"
+                                style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">input</span>
+                            Source
+                        </h3>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="transceiver-column">
+                            <img src="img/ft2d.jpg" alt="FT2D" class="transceiver-img mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="source" id="source-ft2d"
+                                    value="ft2d">
+                                <label class="form-check-label text-white" for="source-ft2d">
+                                    <span class="nerd-icon" style="margin-right: 0.3rem;">󰐌</span>
+                                    <strong>FT2D</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="transceiver-column">
+                            <img src="img/ft3d.jpg" alt="FT3D" class="transceiver-img mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="source" id="source-ft3d"
+                                    value="ft3d">
+                                <label class="form-check-label text-white" for="source-ft3d">
+                                    <span class="nerd-icon" style="margin-right: 0.3rem;">󰐌</span>
+                                    <strong>FT3D</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="transceiver-column">
+                            <img src="img/ft5d.jpg" alt="FT5D" class="transceiver-img mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="source" id="source-ft5d"
+                                    value="ft5d">
+                                <label class="form-check-label text-white" for="source-ft5d">
+                                    <span class="nerd-icon" style="margin-right: 0.3rem;">󰐌</span>
+                                    <strong>FT5D</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conversion Direction Arrow -->
+                <div class="text-center my-4">
+                    <span class="material-icon conversion-arrow">keyboard_arrow_down</span>
+                </div>
+
+                <!-- Destination Row -->
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h3 class="text-white text-center">
+                            <span class="material-icon"
+                                style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">output</span>
+                            Destination
+                        </h3>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="transceiver-column">
+                            <img src="img/ft2d.jpg" alt="FT2D" class="transceiver-img mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="destination" id="dest-ft2d"
+                                    value="ft2d">
+                                <label class="form-check-label text-white" for="dest-ft2d">
+                                    <span class="nerd-icon" style="margin-right: 0.3rem;">󰐌</span>
+                                    <strong>FT2D</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="transceiver-column">
+                            <img src="img/ft3d.jpg" alt="FT3D" class="transceiver-img mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="destination" id="dest-ft3d"
+                                    value="ft3d">
+                                <label class="form-check-label text-white" for="dest-ft3d">
+                                    <span class="nerd-icon" style="margin-right: 0.3rem;">󰐌</span>
+                                    <strong>FT3D</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="transceiver-column">
+                            <img src="img/ft5d.jpg" alt="FT5D" class="transceiver-img mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="destination" id="dest-ft5d"
+                                    value="ft5d">
+                                <label class="form-check-label text-white" for="dest-ft5d">
+                                    <span class="nerd-icon" style="margin-right: 0.3rem;">󰐌</span>
+                                    <strong>FT5D</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- File Upload Section -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+                <div class="card bg-dark border-secondary">
+                    <div class="card-body">
+                        <label for="csvFile" class="form-label text-white mb-3">
+                            <span class="material-icon"
+                                style="font-size: 1.2rem; vertical-align: middle; margin-right: 0.5rem;">upload_file</span>
+                            <strong>Select Source CSV File:</strong>
+                        </label>
+                        <input type="file" class="form-control form-control-lg bg-secondary text-white border-secondary"
+                            id="csvFile" accept=".csv" required>
+                        <div class="form-text text-muted">
+                            <span class="material-icon"
+                                style="font-size: 1rem; vertical-align: middle; margin-right: 0.3rem;">info</span>
+                            Please select a CSV configuration file from your source transceiver.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Convert Button -->
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <button id="convertBtn" class="btn btn-primary btn-lg px-5 py-3 convert-button" disabled>
+                    <span class="material-icon"
+                        style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">sync_alt</span>
+                    <strong>CONVERT!</strong>
+                </button>
+            </div>
+        </div>
+
+        <!-- Status Messages -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <div id="statusMessage" class="alert d-none" role="alert"></div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-5 pt-4 border-top border-secondary">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-muted mb-2">
+                        Coded with <span class="material-icon text-danger" style="font-size: 1rem; vertical-align: middle;">favorite</span> 2025 by <span class="author-name">Peter</span> 
+                        <a href="https://tekk.eu" target="_blank" rel="noopener" class="text-info text-decoration-none"><span class="nerd-icon" style="font-size: 0.9rem; vertical-align: middle; margin-right: 0.2rem;">󰊤</span>@tekk</a> 
+                        <a href="https://www.om7tek.com" target="_blank" rel="noopener" class="text-info text-decoration-none"><span class="material-icon" style="font-size: 0.9rem; vertical-align: middle; margin-right: 0.2rem;">language</span>OM7TEK</a>
+                    </p>
+                    <p class="text-muted small mb-0">
+                        <span class="material-icon" style="font-size: 0.9rem; vertical-align: middle; margin-right: 0.2rem;">open_source</span>
+                        Licensed under GNU GPL v3.0
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

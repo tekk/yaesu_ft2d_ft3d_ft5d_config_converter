@@ -1,0 +1,444 @@
+/* Font Face Declarations */
+@font-face {
+    font-family: 'ProFontNerd';
+    src: url('./fonts/ProFont/ProFontIIxNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('./fonts/Roboto/static/Roboto_Condensed-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NerdSymbols';
+    src: url('./fonts/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MaterialSymbols';
+    src: url('./fonts/Material_Symbols_Outlined,Material_Symbols_Rounded,Material_Symbols_Sharp/Material_Symbols_Rounded/MaterialSymbolsRounded-VariableFont_FILL,GRAD,opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Symbol Font Classes */
+.nerd-icon {
+    font-family: 'NerdSymbols', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.material-icon {
+    font-family: 'MaterialSymbols', 'Material Icons', 'Material Icons Outlined', 'Material Icons Round', 'Material Icons Sharp', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'liga';
+}
+
+/* Global Styles */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'RobotoCondensed', 'Roboto Condensed', 'Roboto', 'SF Pro Display', 'SF Pro Text', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+/* Main heading styling */
+.display-4 {
+    font-family: 'ProFontNerd', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', 'Menlo', 'Consolas', 'Courier New', 'DejaVu Sans Mono', monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2rem;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    color: #ccff00 !important;
+    /* Lime-yellow color */
+}
+
+/* Main heading radio icon - bigger and cyan */
+.display-4 .material-icon {
+    font-size: 9rem !important;
+    color: #00FFFF !important;
+    /* Cyan color */
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
+/* Subheadings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'ProFontNerd', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', 'Menlo', 'Consolas', 'Courier New', 'DejaVu Sans Mono', monospace;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+}
+
+/* Source and Destination subheadings - bigger font */
+.card-body h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* Source and Destination icons - bigger size */
+.card-body h3 .material-icon {
+    font-size: 2.8rem !important;
+    vertical-align: middle;
+    margin-right: 0.7rem;
+}
+
+/* Source icon - light green */
+.card-body .row:first-child h3 .material-icon {
+    color: #90EE90;
+    /* Light green */
+}
+
+/* Destination icon - red-orange */
+.card-body .row:last-child h3 .material-icon {
+    color: #FF4500;
+    /* Red-orange (OrangeRed) */
+}
+
+/* Conversion Direction Arrow */
+.conversion-arrow {
+    font-size: 12rem !important;
+    color: #FFD700 !important;
+    /* Gold/Yellow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Transceiver column styling */
+.transceiver-column {
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.transceiver-column:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Transceiver images - all same height */
+.transceiver-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #333;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.transceiver-img:hover {
+    border-color: #007bff;
+    transform: scale(1.02);
+}
+
+/* Radio button styling */
+.form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5rem;
+}
+
+.form-check-input:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.form-check-input:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.form-check-label {
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.form-check-label:hover {
+    color: #007bff;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* File input styling */
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    background-color: #333;
+    color: #fff;
+}
+
+/* Convert button styling */
+.convert-button {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    min-width: 200px;
+}
+
+.convert-button:hover:not(:disabled) {
+    background: linear-gradient(45deg, #0056b3, #003d7a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.convert-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.convert-button:disabled {
+    background: #333;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Status message styling */
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+    border-left: 4px solid #28a745;
+}
+
+.alert-success::before {
+    content: "✓";
+    font-family: 'MaterialSymbols', sans-serif;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.2em;
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+    border-left: 4px solid #dc3545;
+}
+
+.alert-danger::before {
+    content: "error";
+    font-family: 'MaterialSymbols', sans-serif;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.2em;
+}
+
+.alert-info {
+    background-color: rgba(23, 162, 184, 0.2);
+    color: #17a2b8;
+    border-left: 4px solid #17a2b8;
+}
+
+.alert-info::before {
+    content: "info";
+    font-family: 'MaterialSymbols', sans-serif;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.2em;
+}
+
+/* Icon enhancements */
+.material-icon.large {
+    font-size: 2rem;
+}
+
+.material-icon.small {
+    font-size: 1rem;
+}
+
+.nerd-icon.large {
+    font-size: 1.5rem;
+}
+
+.nerd-icon.small {
+    font-size: 0.8rem;
+}
+
+/* Button icon alignment */
+.convert-button .material-icon {
+    transition: transform 0.3s ease;
+}
+
+.convert-button:hover:not(:disabled) .material-icon {
+    transform: rotate(180deg);
+}
+
+/* Form label icons */
+.form-label .material-icon {
+    color: #007bff;
+}
+
+/* Transceiver label icons */
+.form-check-label .nerd-icon {
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.form-check-input:checked+.form-check-label .nerd-icon {
+    color: #007bff;
+}
+
+.form-check-label:hover .nerd-icon {
+    color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .transceiver-img {
+        height: 150px;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .convert-button {
+        font-size: 1.1rem;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .transceiver-img {
+        height: 120px;
+    }
+
+    .display-4 {
+        font-size: 1.5rem;
+    }
+
+    .transceiver-column {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Loading animation for convert button */
+.convert-button.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.convert-button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Selected state for transceiver columns */
+.transceiver-column.selected {
+    background-color: rgba(0, 123, 255, 0.1);
+    border: 1px solid rgba(0, 123, 255, 0.3);
+    border-radius: 8px;
+}
+
+.transceiver-column.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Footer styling */
+footer .text-muted {
+    color: #888 !important;
+}
+
+/* Author name styling */
+.author-name {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+/* GitHub-style purple for @tekk link */
+footer a[href="https://tekk.eu"] {
+    color: #8b5cf6 !important;
+}
+
+footer a[href="https://tekk.eu"]:hover {
+    color: #a78bfa !important;
+}

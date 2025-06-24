@@ -16,3 +16,51 @@ _site/
 # counterproductive to check this file into the repository.
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Font files - exclude all except essential ones
+fonts/
+!fonts/ProFont/
+!fonts/ProFont/ProFontIIxNerdFont-Regular.ttf
+!fonts/Roboto/
+!fonts/Roboto/static/
+!fonts/Roboto/static/Roboto_Condensed-Medium.ttf
+!fonts/NerdFontsSymbolsOnly/
+!fonts/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf
+!fonts/Material_Symbols_Outlined,Material_Symbols_Rounded,Material_Symbols_Sharp/
+!fonts/Material_Symbols_Outlined,Material_Symbols_Rounded,Material_Symbols_Sharp/Material_Symbols_Rounded/
+!fonts/Material_Symbols_Outlined,Material_Symbols_Rounded,Material_Symbols_Sharp/Material_Symbols_Rounded/MaterialSymbolsRounded-VariableFont_FILL,GRAD,opsz,wght.ttf
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
