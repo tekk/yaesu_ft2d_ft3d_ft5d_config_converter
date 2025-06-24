@@ -1,7 +1,7 @@
 /* Font Face Declarations */
 @font-face {
     font-family: 'ProFontNerd';
-    src: url('./fonts/ProFont/ProFontIIxNerdFont-Regular.ttf') format('truetype');
+    src: url('../fonts/ProFont/ProFontIIxNerdFont-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'RobotoCondensed';
-    src: url('./fonts/Roboto/static/Roboto_Condensed-Medium.ttf') format('truetype');
+    src: url('../fonts/Roboto/static/Roboto_Condensed-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: 'NerdSymbols';
-    src: url('./fonts/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf') format('truetype');
+    src: url('../fonts/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
     font-family: 'MaterialSymbols';
-    src: url('./fonts/Material_Symbols_Outlined,Material_Symbols_Rounded,Material_Symbols_Sharp/Material_Symbols_Rounded/MaterialSymbolsRounded-VariableFont_FILL,GRAD,opsz,wght.ttf') format('truetype');
+    src: url('../fonts/Material_Symbols_Outlined,Material_Symbols_Rounded,Material_Symbols_Sharp/Material_Symbols_Rounded/MaterialSymbolsRounded-VariableFont_FILL,GRAD,opsz,wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
