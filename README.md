@@ -1,8 +1,15 @@
 # 📻 Yaesu FT2D/FT3D/FT5D Configuration Converter
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Version](https://img.shields.io/badge/Version-0.0.1--alpha-orange.svg)](https://github.com/tekk)
+[![Version](https://img.shields.io/badge/Version-1.0.0--alpha-orange.svg)](https://github.com/tekk)
 [![Amateur Radio](https://img.shields.io/badge/Amateur%20Radio-OM7TEK-green.svg)](https://www.om7tek.com)
+
+
+[![Yaesu](./img/yaesu-logo.png)](https://www.yaesu.com/)
+
+[![OM7TEK](./img/OM7TEK-logo.png)](https://www.om7tek.com/)
+
+
 
 A powerful **web-based CSV configuration converter** for Yaesu digital transceivers. Seamlessly convert memory channel configurations between **FT2D**, **FT3D**, and **FT5D** amateur radio transceivers.
 
@@ -23,28 +30,22 @@ As an active amateur radio operator (**OM7TEK**), I created this tool to solve a
 
 ## 🚀 Quick Start
 
-### Online Version (Recommended)
-Visit the live converter.
+### Online Version
+Visit the live converter:
+- [**Github Pages** latest version](https://tekk.github.io/yaesu_ft2d_ft3d_ft5d_config_converter/)
+- [OM7TEK **yaesu.om7tek.com** mirror](https://yaesu.om7tek.com/)
 
-### Local Installation
+## 🖼️ Preview
 
-1. **Clone or Download** this repository:
-```bash
-git clone https://github.com/tekk/yaesu-config-converter.git
-cd yaesu-config-converter
-```
-
-2. **Open in Browser**:
-   - Simply open `index.html` in any modern web browser
-   - No web server required - all dependencies are included locally
+![Preview](./img/screenshot.png)
 
 ## 📋 Usage Instructions
 
 ### Step 1: Select Source Transceiver
 Choose your **source transceiver model** (the format you're converting FROM):
-- **FT2D**: Yaesu FT2D/FT2DE dual band digital transceiver
-- **FT3D**: Yaesu FT3D/FT3DE tri-band digital transceiver  
-- **FT5D**: Yaesu FT5D/FT5DE tri-band digital transceiver
+- **FT2D**: Yaesu FT2D/FT2DE dual band digital transceiver _([📊 sample CSV](sample_csv/FT2D.csv))_
+- **FT3D**: Yaesu FT3D/FT3DE tri-band digital transceiver _([📊 sample CSV](sample_csv/FT3D.csv))_
+- **FT5D**: Yaesu FT5D/FT5D E tri-band digital transceiver _([📊 sample CSV](sample_csv/FT5D.csv))_
 
 ### Step 2: Select Destination Transceiver
 Choose your **destination transceiver model** (the format you're converting TO):
@@ -58,8 +59,9 @@ Choose your **destination transceiver model** (the format you're converting TO):
 
 ### Step 4: Convert & Download
 - Click the **"CONVERT!"** button to process your file
-- The converted CSV will automatically download
+- The converted CSV will be automatically downloaded
 - Import the new file into your destination transceiver's programming software
+- Profit!
 
 ## 🔧 Technical Specifications
 
@@ -73,7 +75,7 @@ Choose your **destination transceiver model** (the format you're converting TO):
 
 ### Field Mapping Details
 
-The converter handles **precise mapping** of all critical fields:
+#### The converter handles **precise mapping** of all critical fields:
 
 - **🔢 Channel Numbers**: Preserved across all formats
 - **📡 Frequencies**: RX/TX frequencies with proper validation
@@ -90,7 +92,7 @@ The converter handles **precise mapping** of all critical fields:
 - ✅ **Firefox** 88+
 - ✅ **Safari** 14+
 - ✅ **Edge** 90+
-- ⚠️ **Internet Explorer**: Not supported
+- ⚠️ **Internet Explorer**: Not supported, and never will be
 
 ## 🛠️ Development
 
@@ -123,10 +125,10 @@ yaesu-config-converter/
 
 ## 🤝 Contributing
 
-Fellow hams are welcome to contribute! This project benefits the entire **amateur radio community**.
+Fellow hams, you are welcome to contribute! This project benefits the entire **amateur radio community**.
 
 ### How to Contribute:
-1. **🐛 Report Bugs**: [Open an issue](https://github.com/tekk/issues) with details
+1. **🐛 Report Bugs**: [Open an issue](https://github.com/tekk/yaesu_ft2d_ft3d_ft5d_config_converter/issues) with details
 2. **💡 Feature Requests**: Suggest improvements for other Yaesu models
 3. **🔧 Code Contributions**: Submit pull requests with enhancements
 4. **📖 Documentation**: Help improve instructions and examples
@@ -141,6 +143,7 @@ Fellow hams are welcome to contribute! This project benefits the entire **amateu
 
 **OM7TEK - Peter Javorsky**
 - 🌐 **Website**: [om7tek.com](https://www.om7tek.com)
+- 👤 **Portfolio**: [tekk.eu](https://tekk.eu)
 - 💻 **GitHub**: [@tekk](https://github.com/tekk) 
 - 📧 **Email**: tekk.sk@gmail.com
 - 📻 **QRZ**: [OM7TEK](https://www.qrz.com/db/OM7TEK)

@@ -4,7 +4,7 @@
     src: url('../fonts/ProFont/ProFontIIxNerdFont-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -12,7 +12,7 @@
     src: url('../fonts/Roboto/static/Roboto_Condensed-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -20,7 +20,7 @@
     src: url('../fonts/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -28,7 +28,7 @@
     src: url('../fonts/Material_Symbols_Outlined,Material_Symbols_Rounded,Material_Symbols_Sharp/Material_Symbols_Rounded/MaterialSymbolsRounded-VariableFont_FILL,GRAD,opsz,wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 /* Symbol Font Classes */
@@ -75,17 +75,32 @@ body {
     margin-bottom: 2rem;
     font-weight: normal;
     letter-spacing: -0.5px;
-    color: #ccff00 !important;
-    /* Lime-yellow color */
+    color: #8b5cf6 !important;
+    /* Purple color */
+    line-height: 1.2;
 }
 
-/* Main heading radio icon - bigger and cyan */
-.display-4 .material-icon {
-    font-size: 9rem !important;
-    color: #00FFFF !important;
-    /* Cyan color */
-    vertical-align: middle;
-    margin-right: 1rem;
+/* Handheld Radio Icon */
+.handheld-radio-icon {
+    height: 80px;
+    animation: radioFloat 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.handheld-radio-icon:hover {
+    transform: scale(1.1);
+}
+
+@keyframes radioFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Subheadings */
@@ -139,9 +154,11 @@ h6 {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -441,4 +458,92 @@ footer a[href="https://tekk.eu"] {
 
 footer a[href="https://tekk.eu"]:hover {
     color: #a78bfa !important;
+}
+
+/* README Modal Styling */
+#readmeModal .modal-content {
+    border: 1px solid #30363d;
+}
+
+#readmeModal .modal-header {
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+#readmeModal .modal-body {
+    background-color: #0d1117;
+    padding: 2rem;
+}
+
+#readmeModal .markdown-body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+#readmeModal .markdown-body h1,
+#readmeModal .markdown-body h2,
+#readmeModal .markdown-body h3,
+#readmeModal .markdown-body h4,
+#readmeModal .markdown-body h5,
+#readmeModal .markdown-body h6 {
+    color: #e6edf3 !important;
+    border-bottom-color: #30363d !important;
+}
+
+#readmeModal .markdown-body code {
+    background-color: rgba(110, 118, 129, 0.4) !important;
+    color: #e6edf3 !important;
+    padding: 0.2em 0.4em !important;
+    border-radius: 6px !important;
+}
+
+#readmeModal .markdown-body pre {
+    background-color: #161b22 !important;
+    border: 1px solid #30363d !important;
+}
+
+#readmeModal .markdown-body blockquote {
+    border-left: 0.25em solid #656d76 !important;
+    color: #8b949e !important;
+}
+
+#readmeModal .markdown-body table {
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+}
+
+#readmeModal .markdown-body table th,
+#readmeModal .markdown-body table td {
+    border: 1px solid #30363d !important;
+    background-color: transparent !important;
+}
+
+#readmeModal .markdown-body table th {
+    background-color: #161b22 !important;
+    font-weight: 600 !important;
+}
+
+#readmeModal .markdown-body a {
+    color: #58a6ff !important;
+    text-decoration: none !important;
+}
+
+#readmeModal .markdown-body a:hover {
+    text-decoration: underline !important;
+}
+
+/* README Link Button Styling */
+#readmeLink {
+    transition: all 0.3s ease;
+    border: 1px solid #58a6ff;
+    color: #58a6ff;
+}
+
+#readmeLink:hover {
+    background-color: #58a6ff;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(88, 166, 255, 0.3);
 }

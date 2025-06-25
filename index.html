@@ -5,9 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yaesu FT2D/FT3D/FT5D Configuration Converter</title>
+    <!-- Font Preloading -->
+    <link rel="preload" href="fonts/ProFont/ProFontIIxNerdFont-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/Roboto/static/Roboto_Condensed-Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf" as="font" type="font/ttf"
+        crossorigin>
+    <link rel="preload"
+        href="fonts/Material_Symbols_Outlined,Material_Symbols_Rounded,Material_Symbols_Sharp/Material_Symbols_Rounded/MaterialSymbolsRounded-VariableFont_FILL,GRAD,opsz,wght.ttf"
+        as="font" type="font/ttf" crossorigin>
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- GitHub Markdown CSS -->
+    <link rel="stylesheet" href="css/github-markdown-dark.css">
+    <!-- APP CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,18 +26,38 @@
         <!-- Main Heading -->
         <div class="row">
             <div class="col-12 text-center mb-5">
+                <!-- Logo -->
+                <div class="mb-4">
+                    <a href="https://www.om7tek.com" target="_blank" rel="noopener" title="OM7TEK">
+                        <img src="img/OM7TEK-logo.png" alt="OM7TEK" style="height: 60px;">
+                    </a>
+                </div>
                 <h1 class="display-4 fw-bold text-white">
-                    <span class="material-icon"
-                        style="font-size: 3rem; vertical-align: middle; margin-right: 0.5rem;">radio</span>
-                    Yaesu FT2D/FT3D/FT5D Configuration Converter
+                    Yaesu FT2D/FT3D/FT5D<br>
+                    Configuration Converter
                     <span class="nerd-icon"
                         style="font-size: 2rem; vertical-align: middle; margin-left: 0.5rem;"></span>
                 </h1>
+                <!-- Handheld Radio Icon -->
+                <div class="mb-4">
+                    <img src="img/handheld-radio.png" alt="Handheld Radio" class="handheld-radio-icon">
+                </div>
+                <!-- README Link -->
+                <div class="mb-4">
+                    <a href="#" id="readmeLink" class="btn btn-outline-info btn-sm">
+                        <span class="material-icon"
+                            style="font-size: 1rem; vertical-align: middle; margin-right: 0.3rem;">description</span>
+                        README
+                    </a>
+                </div>
                 <p class="text-center text-warning mb-4">
-                    <span class="material-icon" style="font-size: 1.2rem; vertical-align: middle; margin-right: 0.5rem;">science</span>
-                    <strong>v0.0.1</strong> This is Alpha version - feel free to open issue on 
-                    <a href="https://github.com/tekk" target="_blank" rel="noopener" class="text-info text-decoration-none">
-                        <span class="nerd-icon" style="font-size: 1rem; vertical-align: middle; margin-right: 0.2rem;">󰊤</span>Github
+                    <span class="material-icon"
+                        style="font-size: 1.2rem; vertical-align: middle; margin-right: 0.5rem;">science</span>
+                    <strong>v1.0.0</strong> This is Beta version - feel free to open issue on
+                    <a href="https://github.com/tekk/yaesu_ft2d_ft3d_ft5d_config_converter" target="_blank"
+                        rel="noopener" class="text-info text-decoration-none">
+                        <span class="nerd-icon"
+                            style="font-size: 1rem; vertical-align: middle; margin-right: 0.2rem;">󰊤</span>Github
                     </a> if you've found a bug.
                 </p>
             </div>
@@ -182,18 +212,25 @@
                 <div id="statusMessage" class="alert d-none" role="alert"></div>
             </div>
         </div>
-        
+
         <!-- Footer -->
         <footer class="text-center mt-5 pt-4 border-top border-secondary">
             <div class="row">
                 <div class="col-12">
                     <p class="text-muted mb-2">
-                        Coded with <span class="material-icon text-danger" style="font-size: 1rem; vertical-align: middle;">favorite</span> 2025 by <span class="author-name">Peter</span> 
-                        <a href="https://tekk.eu" target="_blank" rel="noopener" class="text-info text-decoration-none"><span class="nerd-icon" style="font-size: 0.9rem; vertical-align: middle; margin-right: 0.2rem;">󰊤</span>@tekk</a> 
-                        <a href="https://www.om7tek.com" target="_blank" rel="noopener" class="text-info text-decoration-none"><span class="material-icon" style="font-size: 0.9rem; vertical-align: middle; margin-right: 0.2rem;">language</span>OM7TEK</a>
+                        Coded with <span class="material-icon text-danger"
+                            style="font-size: 1rem; vertical-align: middle;">favorite</span> 2025 by <span
+                            class="author-name">Peter</span>
+                        <a href="https://tekk.eu" target="_blank" rel="noopener"
+                            class="text-info text-decoration-none"><span class="nerd-icon"
+                                style="font-size: 0.9rem; vertical-align: middle; margin-right: 0.2rem;">󰊤</span>@tekk</a>
+                        <a href="https://www.om7tek.com" target="_blank" rel="noopener"
+                            class="text-info text-decoration-none"><span class="material-icon"
+                                style="font-size: 0.9rem; vertical-align: middle; margin-right: 0.2rem;">language</span>OM7TEK</a>
                     </p>
                     <p class="text-muted small mb-0">
-                        <span class="material-icon" style="font-size: 0.9rem; vertical-align: middle; margin-right: 0.2rem;">open_source</span>
+                        <span class="material-icon"
+                            style="font-size: 0.9rem; vertical-align: middle; margin-right: 0.2rem;">open_source</span>
                         Licensed under GNU GPL v3.0
                     </p>
                 </div>
@@ -201,9 +238,39 @@
         </footer>
     </div>
 
+    <!-- README Modal -->
+    <div class="modal fade" id="readmeModal" tabindex="-1" aria-labelledby="readmeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-white" id="readmeModalLabel">
+                        <span class="material-icon"
+                            style="font-size: 1.2rem; vertical-align: middle; margin-right: 0.5rem;">description</span>
+                        README.md
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="readmeContent" class="markdown-body"
+                        style="background-color: transparent; color: #e6edf3;">
+                        <div class="text-center">
+                            <div class="spinner-border text-info" role="status">
+                                <span class="visually-hidden">Loading README...</span>
+                            </div>
+                            <p class="text-muted mt-2">Loading README.md...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
+    <!-- Marked.js for GitHub flavored markdown -->
+    <script src="js/marked.min.js"></script>
+    <!-- Main APP logic JS -->
     <script src="js/app.js"></script>
 </body>
 

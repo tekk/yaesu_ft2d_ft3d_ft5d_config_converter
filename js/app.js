@@ -887,5 +887,138 @@ function initializeDragAndDrop() {
 
 // Drag and drop initialization is now handled in the main DOMContentLoaded event
 
-// These functions have been removed as they referenced non-existent DOM elements
-// The main application functionality is handled by the functions above 
+// README Modal Functionality
+function initializeReadmeModal() {
+    const readmeLink = document.getElementById('readmeLink');
+    const readmeModal = document.getElementById('readmeModal');
+    const readmeContent = document.getElementById('readmeContent');
+
+    if (!readmeLink || !readmeModal || !readmeContent) {
+        console.warn('README modal elements not found');
+        return;
+    }
+
+    // Add click event to README link
+    readmeLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        openReadmeModal();
+    });
+
+    function openReadmeModal() {
+        // Show the modal
+        const modal = new bootstrap.Modal(readmeModal);
+        modal.show();
+
+        // Load README.md content
+        loadReadmeContent();
+    }
+
+    async function loadReadmeContent() {
+        try {
+            // Show loading spinner
+            readmeContent.innerHTML = `
+                <div class="text-center">
+                    <div class="spinner-border text-info" role="status">
+                        <span class="visually-hidden">Loading README...</span>
+                    </div>
+                    <p class="text-muted mt-2">Loading README.md...</p>
+                </div>
+            `;
+
+            // Fetch README.md file
+            const response = await fetch('README.md');
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const markdownText = await response.text();
+
+            // Configure marked with GitHub Flavored Markdown
+            if (typeof marked !== 'undefined') {
+                marked.setOptions({
+                    breaks: true,
+                    gfm: true,
+                    headerIds: true,
+                    mangle: false,
+                    pedantic: false,
+                    sanitize: false,
+                    smartLists: true,
+                    smartypants: false,
+                    xhtml: false
+                });
+
+                // Convert markdown to HTML
+                const htmlContent = marked.parse(markdownText);
+
+                // Display the rendered content
+                readmeContent.innerHTML = `
+                    <div class="markdown-body" style="background-color: transparent; color: #e6edf3; max-width: none;">
+                        ${htmlContent}
+                    </div>
+                `;
+
+                // Fix any relative links in the rendered content
+                fixRelativeLinks(readmeContent);
+                
+            } else {
+                throw new Error('Marked.js library not loaded');
+            }
+
+        } catch (error) {
+            console.error('Error loading README:', error);
+            readmeContent.innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Error Loading README</h4>
+                    <p>Unable to load and render the README.md file.</p>
+                    <hr>
+                    <p class="mb-0">Error: ${error.message}</p>
+                </div>
+            `;
+        }
+    }
+
+    function fixRelativeLinks(container) {
+        // Fix relative image links
+        const images = container.querySelectorAll('img[src^="./"]');
+        images.forEach(img => {
+            const src = img.getAttribute('src');
+            if (src.startsWith('./')) {
+                img.setAttribute('src', src.substring(2));
+            }
+        });
+
+        // Fix relative anchor links
+        const links = container.querySelectorAll('a[href^="./"]');
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href.startsWith('./')) {
+                link.setAttribute('href', href.substring(2));
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener');
+            }
+        });
+
+        // Make external links (HTTP and HTTPS) open in new tab
+        const httpLinks = container.querySelectorAll('a[href^="http://"]');
+        const httpsLinks = container.querySelectorAll('a[href^="https://"]');
+        
+        [...httpLinks, ...httpsLinks].forEach(link => {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener');
+        });
+
+        // Also handle protocol-relative URLs (//)
+        const protocolRelativeLinks = container.querySelectorAll('a[href^="//"]');
+        protocolRelativeLinks.forEach(link => {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener');
+        });
+    }
+}
+
+// Initialize README modal when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait a bit to ensure all other scripts are loaded
+    setTimeout(initializeReadmeModal, 100);
+}); 
