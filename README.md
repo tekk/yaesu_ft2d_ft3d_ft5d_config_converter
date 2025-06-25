@@ -1,7 +1,7 @@
 # 📻 Yaesu FT2D/FT3D/FT5D Configuration Converter
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Version](https://img.shields.io/badge/Version-1.0.0--alpha-orange.svg)](https://github.com/tekk)
+[![Version](https://img.shields.io/badge/Version-1.0.1--beta-blue.svg)](https://github.com/tekk)
 [![Amateur Radio](https://img.shields.io/badge/Amateur%20Radio-OM7TEK-green.svg)](https://www.om7tek.com)
 
 
