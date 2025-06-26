@@ -1,7 +1,7 @@
 # 📻 Yaesu [FT2D](https://www.rigpix.com/yaesu/ft2dr.htm)/[FT3D](https://www.rigpix.com/yaesu/ft3dr.htm)/[FT5D](https://www.rigpix.com/yaesu/ft5dr.htm) Memory Channel CSV Configuration Converter
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Version](https://img.shields.io/badge/Version-1.0.1--beta-blue.svg)](https://github.com/tekk)
+[![Version](https://img.shields.io/badge/Version-1.0.2--beta-blue.svg)](https://github.com/tekk)
 [![Amateur Radio](https://img.shields.io/badge/Amateur%20Radio-OM7TEK-green.svg)](https://www.om7tek.com)
 [![Build Status](https://dev.azure.com/tekk/yaesu-config-converter/_apis/build/status/yaesu-config-converter?branchName=main)](https://dev.azure.com/tekk/yaesu-config-converter/_build/latest?definitionId=1&branchName=main)
 
