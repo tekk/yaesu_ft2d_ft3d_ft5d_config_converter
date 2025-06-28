@@ -1,10 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger when any tags are pushed
+  # Trigger when tags are pushed
   push:
     tags:
-      - '*'  # Triggers on any tag
+      - 'v*'  # Triggers on version tags like v1.0.0, v1.1.0, etc.
   
   # Allow manual triggering from Actions tab
   workflow_dispatch:
