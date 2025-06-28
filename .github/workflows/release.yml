@@ -1,0 +1,65 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers on version tags like v1.0.0, v1.1.0, etc.
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history for proper release notes
+      
+      - name: Get tag information
+        id: tag
+        run: |
+          echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          echo "is_prerelease=${{ contains(github.ref, 'beta') || contains(github.ref, 'alpha') || contains(github.ref, 'rc') }}" >> $GITHUB_OUTPUT
+      
+      - name: Generate release notes
+        id: release_notes
+        run: |
+          echo "## 🚀 Release ${{ steps.tag.outputs.tag }}" > release_notes.md
+          echo "" >> release_notes.md
+          echo "### Changes in this release:" >> release_notes.md
+          echo "" >> release_notes.md
+          
+          # Get commits since last tag
+          LAST_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+          if [ -n "$LAST_TAG" ]; then
+            git log --pretty=format:"- %s (%h)" $LAST_TAG..HEAD >> release_notes.md
+          else
+            git log --pretty=format:"- %s (%h)" >> release_notes.md
+          fi
+          
+          echo "" >> release_notes.md
+          echo "" >> release_notes.md
+          echo "### 📱 How to use:" >> release_notes.md
+          echo "1. **Online Version**: Visit [yaesu-converter.om7tek.com](https://yaesu-converter.om7tek.com/)" >> release_notes.md
+          echo "2. **Self-Hosted**: Download the source code below and serve it locally" >> release_notes.md
+          echo "" >> release_notes.md
+          echo "### 🔧 Self-Hosting Instructions:" >> release_notes.md
+          echo "1. Download and extract the source code" >> release_notes.md
+          echo "2. Serve the files using any web server (Apache, Nginx, or simple Python server)" >> release_notes.md
+          echo "3. Open \`index.html\` in your browser" >> release_notes.md
+          echo "" >> release_notes.md
+          echo "**📻 73, OM7TEK**" >> release_notes.md
+      
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          release_name: "Yaesu FT2D/FT3D/FT5D Converter ${{ steps.tag.outputs.tag }}"
+          body_path: release_notes.md
+          draft: false
+          prerelease: ${{ steps.tag.outputs.is_prerelease }} 
