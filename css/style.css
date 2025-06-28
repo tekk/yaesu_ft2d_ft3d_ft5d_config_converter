@@ -364,6 +364,18 @@ h6 {
     color: #007bff;
 }
 
+/* OM7TEK Logo Responsive Styling */
+.logo-container {
+    text-align: center;
+}
+
+.logo-container img {
+    height: 60px;
+    max-width: 100%;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .transceiver-img {
@@ -382,6 +394,12 @@ h6 {
         font-size: 1.1rem;
         min-width: 150px;
     }
+
+    /* OM7TEK logo responsive scaling */
+    .logo-container img {
+        height: 50px;
+        max-width: 80%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -395,6 +413,12 @@ h6 {
 
     .transceiver-column {
         margin-bottom: 1rem;
+    }
+
+    /* OM7TEK logo extra small screens */
+    .logo-container img {
+        height: 40px;
+        max-width: 70%;
     }
 }
 
