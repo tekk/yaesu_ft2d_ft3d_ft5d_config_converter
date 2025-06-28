@@ -1,9 +1,9 @@
 # 📻 Yaesu [FT2D](https://www.rigpix.com/yaesu/ft2dr.htm)/[FT3D](https://www.rigpix.com/yaesu/ft3dr.htm)/[FT5D](https://www.rigpix.com/yaesu/ft5dr.htm) Memory Channel CSV Configuration Converter
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Version](https://img.shields.io/badge/Version-1.0.2--beta-blue.svg)](https://github.com/tekk)
+[![Version](https://img.shields.io/badge/Version-1.0.3--beta-blue.svg)](https://github.com/tekk)
 [![Amateur Radio](https://img.shields.io/badge/Amateur%20Radio-OM7TEK-green.svg)](https://www.om7tek.com)
-[![Build Status](https://dev.azure.com/tekk/yaesu-config-converter/_apis/build/status/yaesu-config-converter?branchName=main)](https://dev.azure.com/tekk/yaesu-config-converter/_build/latest?definitionId=1&branchName=main)
+[![GitHub](https://img.shields.io/github/v/release/tekk/yaesu_ft2d_ft3d_ft5d_config_converter?include_prereleases)](https://github.com/tekk/yaesu_ft2d_ft3d_ft5d_config_converter/releases)
 
 
 [![Yaesu](./img/yaesu-logo.png)](https://www.yaesu.com/)
@@ -50,16 +50,19 @@ Visit the live converter:
 
 #### 🔧 Required Programming Software
 
-**Download the official [Yaesu](https://www.yaesu.com/) ADMS programming software (free from their website):**
+<a name="adms-downloads"></a>
+### ADMS Downloads
+
+Download the official Yaesu ADMS programming software suites (all of these are from [archive.org](https://archive.org))
 
 **For [FT2D](https://www.rigpix.com/yaesu/ft2dr.htm)/FT2DE/FT2DR:**
-- Software: **[ADMS-8](https://www.yaesu.com/jp/en/download/software/adms8/index.php)** 
+- Software: **[ADMS-8](https://archive.org/details/FT2D_ADMS-8_EXP)**
 
 **For [FT3D](https://www.rigpix.com/yaesu/ft3dr.htm)/FT3DE/FT3DR:**
-- Software: **[ADMS-11](https://www.yaesu.com/jp/en/download/software/adms11/index.php)**
+- Software: **[ADMS-11](https://archive.org/details/FT3D_ADMS-11_ENG)**
 
 **For [FT5D](https://www.rigpix.com/yaesu/ft5dr.htm)/FT5DE/FT5DR:**
-- Software: **[ADMS-14](https://www.yaesu.com/jp/en/download/software/adms14/index.php)**
+- Software: **[ADMS-14](https://archive.org/details/yaesu_FT5D_ADMS-14_ENG)**
 
 #### 📱 Method 1: Using microSD Card (Recommended - No Cable Required)
 
@@ -91,7 +94,7 @@ Visit the live converter:
 - **SCU-19** USB programming cable (included in SCU-39 WIRES-X kit)
 
 1. **Install Programming Software & Drivers**: 
-   - Download and install appropriate ADMS software from [yaesu.com](https://www.yaesu.com/)
+   - Download and install appropriate ADMS software, see [ADMS Downloads](#adms-downloads).
    - Install SCU-19 USB drivers (included with software download)
 
 2. **Connect Transceiver to PC**: 
@@ -153,7 +156,7 @@ Choose your **destination transceiver model** (the format you're converting TO):
 
 1. **Launch Destination ADMS Software**: 
    - Start the appropriate ADMS software for your destination transceiver
-   - **ADMS-8** for [FT2D](https://www.rigpix.com/yaesu/ft2dr.htm), **ADMS-11** for [FT3D](https://www.rigpix.com/yaesu/ft3dr.htm), **ADMS-14** for [FT5D](https://www.rigpix.com/yaesu/ft5dr.htm)
+   - **[ADMS-8](https://archive.org/details/FT2D_ADMS-8_EXP)** for [FT2D](https://www.rigpix.com/yaesu/ft2dr.htm), **[ADMS-11](https://archive.org/details/FT3D_ADMS-11_ENG)** for [FT3D](https://www.rigpix.com/yaesu/ft3dr.htm), **[ADMS-14](https://archive.org/details/yaesu_FT5D_ADMS-14_ENG)** for [FT5D](https://www.rigpix.com/yaesu/ft5dr.htm) (all from archive.org), as already noted in [ADMS Downloads](#adms-downloads) section.
 
 2. **Create New Configuration**:
    - **File** → **New** (to create a blank template)
@@ -218,10 +221,10 @@ Choose your **destination transceiver model** (the format you're converting TO):
 ## 🛠️ Development
 
 ### Architecture
-- **Frontend**: Pure HTML5, CSS3, JavaScript (ES6+)
+- **Frontend**: Pure HTML5 & CSS3 + JavaScript (ES6+)
 - **Framework**: Bootstrap 5.3.0 for responsive UI
 - **Fonts**: Custom Nerd Fonts and Material Symbols for icons
-- **Processing**: Client-side CSV parsing and conversion
+- **Processing**: Client-side JavaScript parsing and conversion
 
 ## 🔍 SEO Keywords & Tags
 
