@@ -4,7 +4,10 @@
 [![Version](https://img.shields.io/badge/Version-v1.1.5-blue.svg)](https://github.com/tekk)
 [![Amateur Radio](https://img.shields.io/badge/Amateur%20Radio-OM7TEK-green.svg)](https://www.om7tek.com)
 [![GitHub](https://img.shields.io/github/v/release/tekk/yaesu_ft2d_ft3d_ft5d_config_converter?include_prereleases)](https://github.com/tekk/yaesu_ft2d_ft3d_ft5d_config_converter/releases)
-
+<a href="https://github.com/tekk/hovnokod-badge">
+  <img src="https://raw.githubusercontent.com/tekk/hovnokod-badge/main/assets/badges/hovnokod-flat.svg" alt="hovnokod">
+  <!-- Alternatives: hovnokod-flat-square.svg, hovnokod-for-the-badge.svg -->
+</a>
 
 [![Yaesu](./img/yaesu-logo.png)](https://www.yaesu.com/)
 
